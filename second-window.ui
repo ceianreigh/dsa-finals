@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url('C:/Users/ceian/Desktop/dsa-finals/bg-gradient-1.jpg');</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>700</width>
+     <height>700</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="selected_directory">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>150</y>
+      <width>361</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Helvetica</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: none; color: white;</string>
+    </property>
+    <property name="text">
+     <string>No directory selected</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="select_directory">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>150</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: #8695bb;
+ color: #333462;
+border: 1px solid #333462;
+border-radius: 7px;</string>
+    </property>
+    <property name="text">
+     <string>Select Directory</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="file_type">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>230</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Helvetica</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: none; color: white;</string>
+    </property>
+    <property name="text">
+     <string>File Type:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="choose_file_type">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>230</y>
+      <width>441</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Helvetica</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: white;
+ color: black;
+border: 1px solid grey;
+border-radius: 7px;
+padding: 5px;</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>.txt</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>.png</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>.jpg</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>.mp4</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>.mp3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>.docx</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>.ppt</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>.pdf</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLineEdit" name="other_files">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>270</y>
+      <width>441</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Helvetica</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: &quot;Helvetica&quot;;
+background: white;
+color: black;
+border: 1px solid gray;
+border-radius: 7px;
+padding: 5px;</string>
+    </property>
+    <property name="text">
+     <string>Other file type</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="folder_name">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>310</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Helvetica</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: none; color: white;</string>
+    </property>
+    <property name="text">
+     <string>Folder Name:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="folder_names">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>310</y>
+      <width>441</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Helvetica</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: &quot;Helvetica&quot;;
+background: white;
+color: black;
+border: 1px solid gray;
+border-radius: 7px;
+padding: 5px;</string>
+    </property>
+    <property name="text">
+     <string>e.g., PDF Files, Text Files, etc.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add_instruction">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>400</y>
+      <width>581</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: #8695bb;
+ color: #333462;
+border: 1px solid #333462;
+border-radius: 7px;</string>
+    </property>
+    <property name="text">
+     <string>Add Instruction</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="organize_files">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>440</y>
+      <width>581</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: #e8ab9a;
+color: #d25f44;
+border: 2px solid #d25f44;
+border-radius: 7px;</string>
+    </property>
+    <property name="text">
+     <string>Organize Files</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>490</y>
+      <width>581</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Helvetica</family>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: &quot;Helvetica&quot;;
+border: 1px solid gray; 
+padding: 5px; 
+background: #fff;
+border-radius: 7px;</string>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Helvetica'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Current Instructions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="back_button">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: #e8ab9a;
+color: #d25f44;
+border: 2px solid #d25f44;
+border-radius: 7px;</string>
+    </property>
+    <property name="text">
+     <string>Home</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="AI_Button">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>10</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: #e8ab9a;
+color: #d25f44;
+border: 2px solid #d25f44;
+border-radius: 7px;</string>
+    </property>
+    <property name="text">
+     <string>AI</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="title">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>50</y>
+      <width>561</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Helvetica</family>
+      <pointsize>-1</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;
+border: none;
+font-family: 'Helvetica';
+font-size:70px;
+color: white;</string>
+    </property>
+    <property name="text">
+     <string>AI File Organizer</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
