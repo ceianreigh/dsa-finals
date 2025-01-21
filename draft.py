@@ -50,10 +50,15 @@ class ThirdWindowApp(QtWidgets.QDialog):
         self.ui = ThirdWindow()
         self.ui.setupUi(self)
         self.ui.home_button.clicked.connect(self.back_to_main)
+        self.ui.organize_button.clicked.connect(self.open_second_window)
 
     def back_to_main(self):
         self.hide()
         self.parent().show()
+    
+    def open_second_window(self):
+        self.hide()
+        self.parent().second_window.show()
 
 
 if __name__ == "__main__":
