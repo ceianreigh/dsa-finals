@@ -1,43 +1,63 @@
-from PyQt6 import QtCore, QtGui, QtWidgets
-import os
-import shutil
-import json
-import openai
+import sys
+from PyQt6 import QtWidgets
+from main_window import Ui_MainWindow  # Import Main Window
+from second_window import Ui_Dialog as SecondWindow  # Import Second Window
+from third_window import Ui_Dialog as ThirdWindow  # Import Third Window
 
-class FileOrganizerApp(QtWidgets.QWidget):
+
+class MainApp(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        self.init_ui()
-    
-    def init_ui(self):
-        self.setWindowTitle("AI File Organizer")
-        self.setGeometry(100, 100, 700, 700)
-        self.setStyleSheet("background-image: url(\'C:/Users/ceian/Desktop/dsa-finals/bg-gradient.jpg\');")
-        self.frame = QtWidgets.QFrame(parent=self)
-        self.frame.setGeometry(QtCore.QRect(0, 0, 700, 700))
-        self.start = QtWidgets.QPushButton(parent=self.frame)
-        self.start.setGeometry(QtCore.QRect(220, 390, 241, 41))
-        font = QtGui.QFont()
-        font.setFamily("Helvetica")
-        font.setPointSize(20)
-        self.start.setFont(font)
-        self.start.setAutoFillBackground(False)
-        self.start.setStyleSheet("background: #e8ab9a; color: #d25f44; border: 2px solid #d25f44; border-radius: 7px;")
-        self.start.setObjectName("start")
-        self.title = QtWidgets.QLabel(parent=self.frame)
-        self.title.setGeometry(QtCore.QRect(60, 240, 561, 81))
-        font = QtGui.QFont()
-        font.setFamily("Helvetica")
-        font.setPointSize(1)
-        font.setBold(True)
-        self.title.setFont(font)
-        self.title.setStyleSheet("background: transparent; border: none; font-family: \'Helvetica\'; font-size:70px; color: white;")
+        # Main Window Setup
+        self.main_ui = Ui_MainWindow()
+        self.main_ui.setupUi(self)
+        self.main_ui.start.clicked.connect(self.open_second_window)
+        self.main_ui.chat_ai.clicked.connect(self.open_third_window)
+
+        # Initialize other windows
+        self.second_window = SecondWindowApp(self)
+        self.third_window = ThirdWindowApp(self)
+
+    def open_second_window(self):
+        self.hide()
+        self.second_window.show()
+
+    def open_third_window(self):
+        self.hide()
+        self.third_window.show()
+
+
+class SecondWindowApp(QtWidgets.QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.ui = SecondWindow()
+        self.ui.setupUi(self)
+        self.ui.back_button.clicked.connect(self.back_to_main)
+        self.ui.AI_Button.clicked.connect(self.open_third_window)
+
+    def back_to_main(self):
+        self.hide()
+        self.parent().show()
+
+    def open_third_window(self):
+        self.hide()
+        self.parent().third_window.show()
+
+
+class ThirdWindowApp(QtWidgets.QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.ui = ThirdWindow()
+        self.ui.setupUi(self)
+        self.ui.home_button.clicked.connect(self.back_to_main)
+
+    def back_to_main(self):
+        self.hide()
+        self.parent().show()
+
 
 if __name__ == "__main__":
-    import sys
     app = QtWidgets.QApplication(sys.argv)
-    app.setStyle("Fusion")
-    window = FileOrganizerApp()
-    window.show()
+    main_app = MainApp()
+    main_app.show()
     sys.exit(app.exec())
-
