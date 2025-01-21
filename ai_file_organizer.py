@@ -1,7 +1,7 @@
 import sys
 from PyQt6 import QtWidgets
 from main_window import Ui_MainWindow  # Import Main Window
-from second_window import Ui_Dialog as SecondWindow  # Import Second Window
+from second_window import Ui_SecondWindow as SecondWindow  # Import Second Window
 from third_window import Ui_Dialog as ThirdWindow  # Import Third Window
 
 
@@ -32,7 +32,7 @@ class SecondWindowApp(QtWidgets.QDialog):
         super().__init__(parent)
         self.ui = SecondWindow()
         self.ui.setupUi(self)
-        self.ui.back_button.clicked.connect(self.back_to_main)
+        self.ui.home_button.clicked.connect(self.back_to_main)
         self.ui.AI_Button.clicked.connect(self.open_third_window)
 
     def back_to_main(self):
