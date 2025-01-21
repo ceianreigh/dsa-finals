@@ -163,7 +163,7 @@ class Ui_Dialog(object):
         self.title.setGeometry(QtCore.QRect(70, 50, 561, 81))
         font = QtGui.QFont()
         font.setFamily("Helvetica")
-        font.setPointSize(0)
+        font.setPointSize(1)
         font.setBold(True)
         self.title.setFont(font)
         self.title.setStyleSheet("background: transparent;\n"
