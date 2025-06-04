@@ -5,7 +5,7 @@ class Ui_ThirdWindow(object):
         ThirdWindow.setObjectName("ThirdWindow")
         ThirdWindow.resize(700, 700)
         ThirdWindow.setSizePolicy(QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed))
-        ThirdWindow.setStyleSheet("background-image: url('C:/Users/ceian/Desktop/dsa-finals/bg-gradient-1.jpg');")
+        ThirdWindow.setStyleSheet("background-image: url('bg-gradient-1.jpg');")
 
         # Frame
         self.frame = QtWidgets.QFrame(parent=ThirdWindow)
