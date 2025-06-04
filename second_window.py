@@ -5,7 +5,7 @@ class Ui_SecondWindow(object):
         SecondWindow.setObjectName("SecondWindow")
         SecondWindow.resize(700, 700)
         SecondWindow.setSizePolicy(QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed))
-        SecondWindow.setStyleSheet("background-image: url('bg-gradient-1.jpg');")
+        SecondWindow.setStyleSheet("background-image: url('C:/Users/ceian/Desktop/dsa-finals/bg-gradient-1.jpg');")
 
         # Frame
         self.frame = QtWidgets.QFrame(SecondWindow)

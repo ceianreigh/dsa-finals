@@ -5,7 +5,7 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(700, 700)
         MainWindow.setSizePolicy(QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed))
-        MainWindow.setStyleSheet("background-image: url('bg-gradient.jpg');")
+        MainWindow.setStyleSheet("background-image: url('C:/Users/ceian/Desktop/dsa-finals/bg-gradient.jpg');")
 
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
